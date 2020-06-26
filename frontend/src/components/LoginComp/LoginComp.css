@@ -1,0 +1,41 @@
+.container {
+	text-align: center;
+
+	background-image: url("../assets/72.jpg");
+	height: 100%;
+	width: 100%;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.sign {
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.signtext {
+	font-family: "Roboto";
+	color: white;
+	font-size: 3em;
+}
+
+.madewithloveheart {
+	color: #e25555;
+}
+
+.madewithlove {
+	color: white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 95%;
+	transform: translateY(-50%);
+}

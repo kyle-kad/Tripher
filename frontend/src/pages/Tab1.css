@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.iontitle {
+    font-family: 'Varela Round';
+    color: black;
+}
+
+.avatarimage {
+    --border-radius: 100px;
+}
