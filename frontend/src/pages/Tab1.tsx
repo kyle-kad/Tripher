@@ -7,7 +7,6 @@ import './Tab1.css';
 import FeaturedCard from '../components/FeaturedCard/FeaturedCard';
 import QuickAccessBar from '../components/QuickAccessBar/QuickAccessBar';
 import ManageSubscriptions from '../components/ManageSubscriptions/ManageSubscriptions';
-import ShowManageIntrests from '../components/ManageIntrests/ManageIntrests';
 import ManageIntrests from '../components/ManageIntrests/ManageIntrests';
 
 
@@ -25,7 +24,7 @@ const Tab1: React.FC = () => {
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+      <IonContent>0
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large" className="iontitle">Tripher</IonTitle>

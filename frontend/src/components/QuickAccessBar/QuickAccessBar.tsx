@@ -2,39 +2,29 @@ import React from 'react';
 import './QuickAccessBar.css';
 import { IonCard, IonGrid, IonRow, IonCol, IonAvatar, IonText } from '@ionic/react';
 
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/modules/rootReducer'
 
 const QuickAccessBar: React.FC = () => {
+
+  const recents = useSelector( (state:RootState) => state.recents.list);
+  
   return (
     <IonCard>
     <IonGrid>
       <IonRow className="ion-align-items-center">
-        <IonCol class="ion-padding-start">
-          <IonAvatar>
-            <img src="https://source.unsplash.com/featured/?happy" />
-            <IonText>happy</IonText>
-          </IonAvatar>
-        </IonCol>
 
-        <IonCol class="ion-padding-start">
-          <IonAvatar>
-            <img src="https://source.unsplash.com/featured/?sad" />
-            <IonText>happy</IonText>
-          </IonAvatar>
-        </IonCol>
+        {recents.map( (recent, index) => (
+          <IonCol class="ion-padding-start">
+            <a href='https://youtube.com'>
+            <IonAvatar>
+              <img src="https://source.unsplash.com/featured/?happy" />
+              <IonText>{recent.userData.mood}</IonText>
+            </IonAvatar>
+            </a>
+          </IonCol>
+        ))}     
 
-        <IonCol class="ion-padding-start">
-          <IonAvatar>
-            <img src="https://source.unsplash.com/featured/?laugh" />
-            <IonText>happy</IonText>
-          </IonAvatar>
-        </IonCol>
-
-        <IonCol class="ion-padding-start">
-          <IonAvatar>
-            <img src="https://source.unsplash.com/featured/?lonely" />
-            <IonText>happy</IonText>
-          </IonAvatar>
-        </IonCol>
       </IonRow>
     </IonGrid>
     <br />
