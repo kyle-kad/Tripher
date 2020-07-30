@@ -30,7 +30,7 @@ const Login: React.FC = () => {
  		firebase.auth().onAuthStateChanged(user => { 
 
  			if(user){
- 				setLogin(true);
+ 				setLogin(true); 
  			}
 
  		})
