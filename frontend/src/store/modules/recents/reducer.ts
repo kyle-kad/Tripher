@@ -12,19 +12,19 @@ const initial_state = {
         {
         docId: 'sad',
         userData: {
-            mood: 'Happy',
+            mood: 'sad',
             data: 'other data here'
             }
         },
         {
         docId: 'joyful',
         userData: {
-            mood: 'Happy',
+            mood: 'joyful',
             data: 'other data here'
             }
         },
         {
-        docId: 'happy',
+        docId: 'lonely',
         userData: {
             mood: 'Happy',
             data: 'other data here'

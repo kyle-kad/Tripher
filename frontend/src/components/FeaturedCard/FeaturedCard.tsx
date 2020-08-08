@@ -18,7 +18,7 @@ const FeaturedCard: React.FC = () => {
       <IonSlides pager={true} options={slideOpts}>
 
       {posts.map( (post, index) => (
-        <IonSlide key={index}>
+        <IonSlide key={index}> 
           <IonCard>
           <IonImg alt='image' src={post.userData.img} />
     

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonButton, IonCardContent, IonItem, IonThumbnail, IonLabel } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonButton, IonCardContent, IonItem, IonThumbnail, IonLabel, IonCardHeader, IonCardSubtitle, IonCardTitle, IonAvatar } from '@ionic/react';
 import firebase from 'firebase';
 import './Tab3.css';
 
@@ -17,11 +17,18 @@ const Tab3: React.FC = () => {
             <IonTitle size="large">About</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonItem>
-          <IonImg src="https://source.unsplash.com/random" />
+
+        <IonItem >
+          <IonAvatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+          </IonAvatar>
+          
+          <IonCardHeader>
+            <IonCardTitle>Kyle Kadango</IonCardTitle>
+            <IonCardSubtitle>Hello</IonCardSubtitle>
+          </IonCardHeader>
         </IonItem>
 
-        <IonTitle>Hey</IonTitle>
         <IonCardContent>
           Thanks for checking out the app.
           <br/><br/>

@@ -6,6 +6,7 @@ import App from './App';
 import store from './store/index';
 import LoginComp from './components/LoginComp/LoginComp';
 
+
 const Login: React.FC = () => {
 
 	var firebaseConfig:any  = {

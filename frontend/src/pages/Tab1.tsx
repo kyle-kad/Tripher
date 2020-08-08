@@ -24,7 +24,7 @@ const Tab1: React.FC = () => {
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>0
+      <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large" className="iontitle">Tripher</IonTitle>

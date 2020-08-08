@@ -29,7 +29,7 @@ const ManageIntrests: React.FC = () => {
       <IonList>
         {intrests.map((intrest , index) => (
           <IonItemSliding key={ index.toString() }> 
-            <IonItem>           
+            <IonItem detail>           
               <IonLabel>{intrest}</IonLabel>
             </IonItem>
             <IonItemOptions side="end">
