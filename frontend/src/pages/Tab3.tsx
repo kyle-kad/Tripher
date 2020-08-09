@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonButton, IonCardContent, IonItem, IonThumbnail, IonLabel, IonCardHeader, IonCardSubtitle, IonCardTitle, IonAvatar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem,  IonLabel,
+  IonCardHeader, IonCardSubtitle, IonCardTitle, IonAvatar, IonList,  IonCard } from '@ionic/react';
 import firebase from 'firebase';
 import './Tab3.css';
 
@@ -12,11 +13,7 @@ const Tab3: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">About</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+    
 
         <IonItem >
           <IonAvatar>
@@ -29,7 +26,62 @@ const Tab3: React.FC = () => {
           </IonCardHeader>
         </IonItem>
 
-        <IonCardContent>
+        <br />
+        <br />
+
+        <IonList>
+          <IonItem button onClick={() => { }} detail>
+            <IonLabel>
+              YouTube Channel Promo
+            </IonLabel>
+          </IonItem>
+
+          <IonItem button onClick={() => { }} detail>
+            <IonLabel>
+              Tell a Friend
+            </IonLabel>
+          </IonItem>
+        </IonList>
+
+        <br />
+        <br />
+
+        <IonList>
+          <IonItem button onClick={() => { console.log('Help Clicked') }} detail>
+            <IonLabel>
+              Help
+            </IonLabel>
+          </IonItem>
+
+          <IonItem button onClick={() => { }} href="https://buymeacoffee.com/kylet">
+            <IonLabel>
+              Buy me a Coffee
+            </IonLabel>
+          </IonItem>
+        </IonList>
+
+        <br />
+        <br />
+        <br />
+
+        <IonList>
+          <IonItem button onClick={() => { firebase.auth().signOut() }} href='/'>
+            <IonLabel>
+              Sign Out
+            </IonLabel>
+          </IonItem>
+        </IonList>
+
+        <br />
+
+        <IonCard>    
+          <IonCardHeader>
+              <IonCardSubtitle>Tripher</IonCardSubtitle>
+              <IonCardSubtitle>Copyright &#169; 2020, All Rights Reserved</IonCardSubtitle>
+          </IonCardHeader>
+        </IonCard>
+
+        {/* <IonCardContent>
           Thanks for checking out the app.
           <br/><br/>
           Tripher is in development and new features will constantly be added.
@@ -41,15 +93,12 @@ const Tab3: React.FC = () => {
           Kyle - founder
         </IonCardContent>
 
-        <a href="https://instagram.com/ky.le_t?r=nametag"><IonButton expand="block" fill="clear">Have A Chat</IonButton></a>
-        <IonButton expand="block" fill="clear" onClick={ () => { firebase.auth().signOut() }} href='/home' >Sign out</IonButton>
-
          <IonButton expand="block" fill="clear">
           <IonThumbnail slot="start">
             <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" />
           </IonThumbnail>
           <a href="https://buymeacoffee.com/kylet"><IonLabel>Buy me a coffee</IonLabel></a>
-        </IonButton>
+        </IonButton> */}
 
       </IonContent>
     </IonPage>
