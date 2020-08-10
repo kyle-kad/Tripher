@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
           IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent,
           IonButton, IonRippleEffect, IonModal } from '@ionic/react';
@@ -9,12 +9,27 @@ import QuickAccessBar from '../components/QuickAccessBar/QuickAccessBar';
 import ManageSubscriptions from '../components/ManageSubscriptions/ManageSubscriptions';
 import ManageIntrests from '../components/ManageIntrests/ManageIntrests';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../store/modules/rootReducer'
+import { updateUserInfo } from "../store/modules/user/action";
 
 
 const Tab1: React.FC = () => {
 
   var [ ShowManageSubscriptions, setShowManageSubscriptions ] = useState(false);
   var [ ShowManageIntrests, setShowManageIntrests ] = useState(false);
+
+  var [ Updated, setUpdated ] = useState(false);
+  const name = useSelector( (state:RootState) => state.user.list.name);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if(Updated === false){
+      dispatch( updateUserInfo()); 
+      setUpdated( true );
+    }
+  });
+
 
 
   return (
@@ -35,7 +50,7 @@ const Tab1: React.FC = () => {
 
         <IonCardHeader>
           <IonCardSubtitle>Hello</IonCardSubtitle>
-          <IonCardTitle><strong>Kyle Kadango</strong></IonCardTitle>
+          <IonCardTitle><strong>{name}</strong></IonCardTitle>
         </IonCardHeader>
 
 

@@ -4,7 +4,17 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem,  IonLabe
 import firebase from 'firebase';
 import './Tab3.css';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../store/modules/rootReducer'
+
+
 const Tab3: React.FC = () => {
+
+  const name = useSelector( (state:RootState) => state.user.list.name);
+  const profileImage = useSelector( (state:RootState) => state.user.list.photoUrl);
+
+
+
   return (
     <IonPage>
       <IonHeader>
@@ -17,11 +27,11 @@ const Tab3: React.FC = () => {
 
         <IonItem >
           <IonAvatar>
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+            <img src={profileImage} />
           </IonAvatar>
           
           <IonCardHeader>
-            <IonCardTitle>Kyle Kadango</IonCardTitle>
+            <IonCardTitle>{name}</IonCardTitle>
             <IonCardSubtitle>Hello</IonCardSubtitle>
           </IonCardHeader>
         </IonItem>
@@ -36,7 +46,7 @@ const Tab3: React.FC = () => {
             </IonLabel>
           </IonItem>
 
-          <IonItem button onClick={() => { }} detail>
+          <IonItem button onClick={() => {  }} detail>
             <IonLabel>
               Tell a Friend
             </IonLabel>

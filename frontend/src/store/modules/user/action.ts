@@ -1,4 +1,4 @@
-export function updateInfo(){
+export function updateUserInfo(){
     return {
         type: "user/UPDATE"
     };

@@ -21,7 +21,7 @@ const Login: React.FC = () => {
 	};
 
  	
- 	var [login , setLogin] = useState(false);	
+	 var [login , setLogin] = useState(false);	
 
  	if(!firebase.apps.length){
  		firebase.initializeApp(firebaseConfig);
@@ -31,7 +31,7 @@ const Login: React.FC = () => {
  		firebase.auth().onAuthStateChanged(user => { 
 
  			if(user){
- 				setLogin(true); 
+				setLogin(true); 
  			}
 
  		})
