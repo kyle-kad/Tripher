@@ -49,7 +49,7 @@ const Tab1: React.FC = () => {
         <QuickAccessBar /> 
 
         <IonCardHeader>
-          <IonCardSubtitle>Hello</IonCardSubtitle>
+          <IonCardSubtitle>Hey There!</IonCardSubtitle>
           <IonCardTitle><strong>{name}</strong></IonCardTitle>
         </IonCardHeader>
 

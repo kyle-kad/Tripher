@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem,  IonLabel,
-  IonCardHeader, IonCardSubtitle, IonCardTitle, IonAvatar, IonList,  IonCard } from '@ionic/react';
+  IonCardHeader, IonCardSubtitle, IonCardTitle, IonAvatar, IonList,  IonCard, IonModal, IonButton } from '@ionic/react';
 import firebase from 'firebase';
 import './Tab3.css';
+
+
+import ShareCard from '../components/AboutComps/Share/ShareCard';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../store/modules/rootReducer'
 
 
+
 const Tab3: React.FC = () => {
+
+  var [ showShareCard, setShowShareCard ] = useState(false);
+
 
   const name = useSelector( (state:RootState) => state.user.list.name);
   const profileImage = useSelector( (state:RootState) => state.user.list.photoUrl);
@@ -46,11 +53,15 @@ const Tab3: React.FC = () => {
             </IonLabel>
           </IonItem>
 
-          <IonItem button onClick={() => {  }} detail>
+          <IonItem button onClick={() => { setShowShareCard( true ) }} detail>
             <IonLabel>
               Tell a Friend
             </IonLabel>
           </IonItem>
+          <IonModal isOpen={showShareCard} cssClass='my-custom-class'>
+            <ShareCard />
+            <IonButton expand="block" fill="clear" onClick={() => setShowShareCard(false)}> Close </IonButton> 
+          </IonModal>
         </IonList>
 
         <br />
@@ -90,25 +101,6 @@ const Tab3: React.FC = () => {
               <IonCardSubtitle>Copyright &#169; 2020, All Rights Reserved</IonCardSubtitle>
           </IonCardHeader>
         </IonCard>
-
-        {/* <IonCardContent>
-          Thanks for checking out the app.
-          <br/><br/>
-          Tripher is in development and new features will constantly be added.
-          Some features soon to be added are user logins accounts and boards for youtube channels you are subscribed to. 
-          <br/><br/>
-          Your support is truely appreciated.
-          Cheers
-          <br/><br/>
-          Kyle - founder
-        </IonCardContent>
-
-         <IonButton expand="block" fill="clear">
-          <IonThumbnail slot="start">
-            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" />
-          </IonThumbnail>
-          <a href="https://buymeacoffee.com/kylet"><IonLabel>Buy me a coffee</IonLabel></a>
-        </IonButton> */}
 
       </IonContent>
     </IonPage>

@@ -19,7 +19,7 @@ const ManageSubscriptions: React.FC = () => {
             
       <IonList>
         {Channels.map((channel, index ) => (
-          <IonItem key={index}>
+          <IonItem key={index} lines="none">
             <IonAvatar slot="start">
               <img src="https://source.unsplash.com/random" />
             </IonAvatar>
