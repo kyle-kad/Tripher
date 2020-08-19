@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^2.4.0",
+    "@capacitor/core": "2.4.0",
     "@ionic/react": "^5.1.1",
     "@ionic/react-router": "^5.1.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -56,6 +58,7 @@
   },
   "description": "My Tripher Youtube project",
   "devDependencies": {
+    "@capacitor/cli": "2.4.0",
     "@types/react-redux": "^7.1.9"
   }
 }

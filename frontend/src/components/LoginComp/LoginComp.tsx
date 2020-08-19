@@ -5,9 +5,9 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import { IonCard, IonCardTitle } from '@ionic/react'
 
 var uiConfig:any = {
+		signInSuccessUrl: '/Tripher',
   		signInFlow: "redirect",
-  		signInOptions: [ firebase.auth.GoogleAuthProvider.PROVIDER_ID ],
-  		callbacks: { signInSuccess: () => false }
+  		signInOptions: [ firebase.auth.GoogleAuthProvider.PROVIDER_ID ]
 	};
 
 
@@ -15,7 +15,7 @@ const LoginComp: React.FC = () => {
   return (
     <div className="container">
     	 <IonCard className='sign'>
-    	 	<IonCardTitle className='signtext'> Tripher Sign-In </IonCardTitle>
+    	 	<IonCardTitle className='signtext'> Tripher </IonCardTitle>
        </IonCard>
  		   <StyledFirebaseAuth  uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
 

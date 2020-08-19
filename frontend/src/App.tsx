@@ -43,6 +43,7 @@ const App: React.FC = () => (
           <Route path="/board" component={Tab2} exact={true} />
           <Route path="/about" component={Tab3} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+          <Route path="/Tripher" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">

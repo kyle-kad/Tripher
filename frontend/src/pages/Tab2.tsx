@@ -9,10 +9,9 @@ const sad:string = "https://source.unsplash.com/featured/?sad"
 
 const Tab2: React.FC = () => {
 
-  var [ cat, setCat ] = useState(['tech']);
+  var [ cat] = useState(['tech']);
   var [ searchText, setSearchText ] = useState('');
   var [ showModal, setShowModal ] = useState(false);
-  var [ category, setCategory ] = useState('secondary');
 
   function checkCatExist( cate:string ){
     for( cate in cat){

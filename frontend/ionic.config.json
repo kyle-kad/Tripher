@@ -1,5 +1,7 @@
 {
   "name": "tripher",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

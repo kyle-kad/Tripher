@@ -6,8 +6,10 @@ import './Tab3.css';
 
 
 import ShareCard from '../components/AboutComps/Share/ShareCard';
+import HelpCard from '../components/AboutComps/Help/HelpCard';
+import YoutubePromo from '../components/AboutComps/YoutubePromo/YoutubePromo';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../store/modules/rootReducer'
 
 
@@ -15,6 +17,8 @@ import { RootState } from '../store/modules/rootReducer'
 const Tab3: React.FC = () => {
 
   var [ showShareCard, setShowShareCard ] = useState(false);
+  var [ showHelpCard, setShowHelpCard ] = useState(false);
+  var [ showYoutubePromo, setShowYoutubePromo ] = useState(false);
 
 
   const name = useSelector( (state:RootState) => state.user.list.name);
@@ -34,7 +38,7 @@ const Tab3: React.FC = () => {
 
         <IonItem >
           <IonAvatar>
-            <img src={profileImage} />
+            <img src={profileImage} alt="profile picture"/>
           </IonAvatar>
           
           <IonCardHeader>
@@ -47,11 +51,16 @@ const Tab3: React.FC = () => {
         <br />
 
         <IonList>
-          <IonItem button onClick={() => { }} detail>
+          <IonItem button onClick={() => { setShowYoutubePromo( true ) }} detail>
             <IonLabel>
               YouTube Channel Promo
             </IonLabel>
           </IonItem>
+          <IonModal isOpen={showYoutubePromo} cssClass='my-custom-class'>
+            <YoutubePromo />
+            <IonButton expand="block" fill="clear" onClick={() => setShowYoutubePromo(false)}> Close </IonButton> 
+          </IonModal>
+
 
           <IonItem button onClick={() => { setShowShareCard( true ) }} detail>
             <IonLabel>
@@ -68,13 +77,18 @@ const Tab3: React.FC = () => {
         <br />
 
         <IonList>
-          <IonItem button onClick={() => { console.log('Help Clicked') }} detail>
+          <IonItem button onClick={() => { setShowHelpCard( true ) }} detail>
             <IonLabel>
               Help
             </IonLabel>
           </IonItem>
+          <IonModal isOpen={showHelpCard} cssClass='my-custom-class'>
+            <HelpCard />
+            <IonButton expand="block" fill="clear" onClick={() => setShowHelpCard(false)}> Close </IonButton> 
+          </IonModal>
 
-          <IonItem button onClick={() => { }} href="https://buymeacoffee.com/kylet">
+
+          <IonItem button onClick={() => { }} href="https://buymeacoffee.com/kylet" target="_blank">
             <IonLabel>
               Buy me a Coffee
             </IonLabel>

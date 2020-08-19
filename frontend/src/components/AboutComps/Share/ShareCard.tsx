@@ -27,7 +27,7 @@ const ShareCard: React.FC = () => {
     <div>
       <IonCardHeader>
         <IonCardTitle><strong>Tell a Friend</strong></IonCardTitle>
-        <IonCardSubtitle>Manage subscriptions from Youtube</IonCardSubtitle>
+        <IonCardSubtitle>Get the word about this awesome app going!</IonCardSubtitle>
       </IonCardHeader>
 
       <br />
