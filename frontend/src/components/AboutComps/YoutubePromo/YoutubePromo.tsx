@@ -1,6 +1,6 @@
 import React from 'react';
 import './YoutubePromo.css';
-import { IonCardHeader, IonCardTitle, IonCardSubtitle, IonList, IonItem, IonLabel, IonIcon } from '@ionic/react';
+import { IonCardHeader, IonCardTitle, IonCardSubtitle, IonImg, IonText } from '@ionic/react';
 
 
 const YoutubePromo: React.FC = () => {
@@ -8,40 +8,22 @@ const YoutubePromo: React.FC = () => {
   return (
     <div>
         <IonCardHeader>
-            <IonCardTitle><strong>Help</strong></IonCardTitle>
-            <IonCardSubtitle>Learn more about this platform</IonCardSubtitle>
+            <IonCardTitle><strong>Get Featured</strong></IonCardTitle>
+            <IonCardSubtitle>On our app</IonCardSubtitle>
         </IonCardHeader>
 
         <br />
         <br />
 
-        <IonList lines="none">
-            <IonItem>
-                <IonIcon name="cog-outline"></IonIcon>
-                <IonLabel>How it works</IonLabel>
-            </IonItem>
+        <IonImg src="https://miro.medium.com/proxy/1*8l__qu6I7hIZLLnnzrGcLQ.png" />
 
-            <br />
+        <br />
 
-            <IonItem>
-                <IonIcon name="brush-outline"></IonIcon>
-                <IonLabel>Get featured</IonLabel>
-            </IonItem>
+        <IonText>
+            <h5>How it Works</h5>
 
-            <br />
-
-            <IonItem>
-                <IonIcon name="build-outline"></IonIcon>
-                <IonLabel>How Tripher was built</IonLabel>
-            </IonItem>
-
-            <br />
-
-            <IonItem>
-                <IonIcon name="archive-outline"></IonIcon>
-                <IonLabel>Feedback</IonLabel>
-            </IonItem>
-        </IonList>
+            <p>Get more viewrs on your youtube channel by getting featured on our app.</p>
+        </IonText>
     </div>
   );
 };

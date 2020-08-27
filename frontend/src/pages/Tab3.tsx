@@ -38,7 +38,7 @@ const Tab3: React.FC = () => {
 
         <IonItem >
           <IonAvatar>
-            <img src={profileImage} alt="profile picture"/>
+            <img src={profileImage} alt=""/>
           </IonAvatar>
           
           <IonCardHeader>

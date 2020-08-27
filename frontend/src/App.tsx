@@ -14,6 +14,7 @@ import { help, planet, home } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import homeTab from './pages/home/home';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -42,6 +43,7 @@ const App: React.FC = () => (
           <Route path="/home" component={Tab1} exact={true} />
           <Route path="/board" component={Tab2} exact={true} />
           <Route path="/about" component={Tab3} />
+          <Route path="/newHome" component={homeTab} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           <Route path="/Tripher" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
