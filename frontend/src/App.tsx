@@ -40,10 +40,10 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/home" component={Tab1} exact={true} />
+          <Route path="/home2" component={Tab1} exact={true} />
           <Route path="/board" component={Tab2} exact={true} />
           <Route path="/about" component={Tab3} />
-          <Route path="/newHome" component={homeTab} />
+          <Route path="/home" component={homeTab} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           <Route path="/Tripher" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
