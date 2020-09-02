@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
 import './home.css';
 import FeaturedCard from '../../components/FeaturedCard/FeaturedCard';
 
@@ -17,7 +17,6 @@ const homeTab: React.FC = () => {
 
         <div className='channelTitleBox'>
             <h1 className='channelTitle'>Swamps</h1>
-            {/* <h4 className='channelSubTitle'>MORE INFO</h4> */}
             <IonButton expand="block" fill="clear" onClick={() => console.log('more info clicked')}> More Info </IonButton> 
         </div>
 
@@ -26,15 +25,43 @@ const homeTab: React.FC = () => {
         <IonCardTitle><strong>Tina</strong></IonCardTitle>
       </IonCardHeader> */}
 
+
         <IonCardHeader>
           <IonCardTitle>Featured</IonCardTitle>
         </IonCardHeader>
+        
 
         <IonCardContent>
           <FeaturedCard />
         </IonCardContent>
 
+        <IonCardHeader>
+          <IonCardTitle>Moods</IonCardTitle>
+        </IonCardHeader>
 
+        <IonGrid>
+          <IonRow>
+            <IonCol><IonButton expand="block" fill="clear">Funny</IonButton></IonCol>
+            <IonCol><IonButton expand="block" fill="clear">Weird</IonButton></IonCol>
+            <IonCol><IonButton expand="block" fill="clear">Uplifting</IonButton></IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol><IonButton expand="block" fill="clear">Heart Warming</IonButton></IonCol>
+            <IonCol><IonButton expand="block" fill="clear">Romantic</IonButton></IonCol>
+          </IonRow>
+          
+          <IonRow>
+            <IonCol><IonButton expand="block" fill="clear">Inspiring</IonButton></IonCol>
+            <IonCol><IonButton expand="block" fill="clear">Sweet</IonButton></IonCol>
+            <IonCol><IonButton expand="block" fill="clear">Instructive</IonButton></IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol><IonButton expand="block" fill="clear">Suspenseful</IonButton></IonCol>
+            <IonCol><IonButton expand="block" fill="clear">Touching</IonButton></IonCol>
+          </IonRow>
+        </IonGrid>
 
       </IonContent>
     </IonPage>
