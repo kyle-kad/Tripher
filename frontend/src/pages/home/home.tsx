@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol, IonItem, IonSlide, IonCard } from '@ionic/react';
 import './home.css';
 import FeaturedCard from '../../components/FeaturedCard/FeaturedCard';
 
@@ -34,6 +34,38 @@ const homeTab: React.FC = () => {
         <IonCardContent>
           <FeaturedCard />
         </IonCardContent>
+
+        <IonItem>
+            <IonImg src='https://source.unsplash.com/random' />
+
+            <IonCardContent>
+              <IonCardTitle>Sad</IonCardTitle>
+                A bit down in the dumps? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                <a href="https://www.youtube.com/results?search_query=sadvlog"><IonButton expand="block" fill="clear">GO</IonButton></a>
+            </IonCardContent>
+          </IonItem>
+
+          <IonSlide> 
+            <IonItem>
+              <IonImg src='https://source.unsplash.com/random' />
+
+              <IonCardContent>
+                <IonCardTitle>Sad</IonCardTitle>
+                  A bit down in the dumps? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                  <a href="https://www.youtube.com/results?search_query=sadvlog"><IonButton expand="block" fill="clear">GO</IonButton></a>
+              </IonCardContent>
+            </IonItem>
+
+            <IonItem>
+              <IonImg src='https://source.unsplash.com/random' />
+
+              <IonCardContent>
+                <IonCardTitle>Sad</IonCardTitle>
+                  A bit down in the dumps? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                  <a href="https://www.youtube.com/results?search_query=sadvlog"><IonButton expand="block" fill="clear">GO</IonButton></a>
+              </IonCardContent>
+            </IonItem>
+          </IonSlide>         
 
         <IonCardHeader>
           <IonCardTitle>Moods</IonCardTitle>
