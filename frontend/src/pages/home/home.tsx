@@ -40,7 +40,7 @@ const homeTab: React.FC = () => {
 
             <IonCardContent>
               <IonCardTitle>Sad</IonCardTitle>
-                A bit down in the dumps? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                A bit down in the dumps? Lorem Ipsum is simpl dummy text of the printing and typesetting industry. 
                 <a href="https://www.youtube.com/results?search_query=sadvlog"><IonButton expand="block" fill="clear">GO</IonButton></a>
             </IonCardContent>
           </IonItem>
