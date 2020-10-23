@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol, IonItem, IonSlide, IonCard } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg, IonCardHeader,
+         IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonGrid, IonRow, IonCol,
+         IonItem, IonSlide, IonCard, IonModal } from '@ionic/react';
 import './home.css';
+
 import FeaturedCard from '../../components/FeaturedCard/FeaturedCard';
+import CreatorCard from '../../components/Creator/CreatorCard';
 
 
-
-const homeTab: React.FC = () => {
+const HomeTab: React.FC = () => {
 
   return (
     <IonPage >
@@ -17,7 +20,8 @@ const homeTab: React.FC = () => {
 
         <div className='channelTitleBox'>
             <h1 className='channelTitle'>Swamps</h1>
-            <IonButton expand="block" fill="clear" onClick={() => console.log('more info clicked')}> More Info </IonButton>
+            <IonCardSubtitle>56K Subscribers | SA Creator | Vlogs & LifeStyle</IonCardSubtitle>
+            <IonButton expand="block" fill="clear" onClick={() => {}} href='/creator'> More Info </IonButton>
         </div>
 
 
@@ -71,4 +75,4 @@ const homeTab: React.FC = () => {
   );
 };
 
-export default homeTab;
+export default HomeTab;

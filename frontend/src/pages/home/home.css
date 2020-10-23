@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
 .branding{
     color: white;
 
@@ -6,7 +8,7 @@
 	right: 0;
 	top: 1%;
     transform: translateY(-50%);
-    
+
 }
 
 .headerImage{
@@ -25,8 +27,9 @@
     max-height: 15vh;
 
     text-align: center;
+    font-family: 'Oswald';
 
-    border-bottom-left-radius: 50px; 
+    border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 
     box-shadow: rgba(0, 0, 0, 0.13) 0px 4px 16px;

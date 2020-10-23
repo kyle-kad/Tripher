@@ -5,16 +5,18 @@ import {
   IonIcon,
   IonLabel,
   IonRouterOutlet,
-  IonTabBar, 
+  IonTabBar,
   IonTabButton,
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { help, planet, home } from 'ionicons/icons';
+
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import homeTab from './pages/home/home';
+import Creator from './components/Creator/CreatorCard';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,13 +35,14 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import './theme/variables.css'; 
+import './theme/variables.css';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Route path="/creator" component={Creator} exact={true} />
           <Route path="/home2" component={Tab1} exact={true} />
           <Route path="/board" component={Tab2} exact={true} />
           <Route path="/about" component={Tab3} />
@@ -59,11 +62,11 @@ const App: React.FC = () => (
           <IonTabButton tab="About" href="/about">
             <IonIcon icon={help} />
             <IonLabel>About</IonLabel>
-          </IonTabButton> 
+          </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
-  </IonApp> 
+  </IonApp>
 );
 
 export default App;
